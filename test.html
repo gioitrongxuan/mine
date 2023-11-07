@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* CSS cho overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Màu nền của overlay */
+        z-index: 9998;
+    }
+
+    /* CSS cho popup 1 */
+    .popup1 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 9999;
+    }
+
+    /* CSS cho popup 2 */
+    .popup2 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f9f9f9;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 9999;
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="popup1">
+        <p>Popup 1</p>
+    </div>
+    <div class="popup2">
+        <p>Popup 2</p>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var popup1 = document.querySelector('.popup1');
+            var popup2 = document.querySelector('.popup2');
+            var overlay = document.querySelector('.overlay');
+
+            // Hiển thị popup 1
+            popup1.style.display = 'block';
+
+            // Sau 5 giây, ẩn popup 1 và hiển thị popup 2
+            setTimeout(function() {
+                popup1.style.display = 'none';
+                popup2.style.display = 'block';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

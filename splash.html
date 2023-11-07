@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splash Page</title>
+  <style>
+    /* CSS tùy chỉnh cho trang "splash" */
+    body {
+      margin: 0;
+      overflow: hidden; /* Ẩn thanh cuộn */
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Màn phủ mờ */
+      z-index: 1; /* Hiển thị phía trên mọi thứ khác */
+    }
+
+    #content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(100%); /* Di chuyển nội dung ra bên phải */
+      transition: transform 4s ease; /* Hiệu ứng di chuyển trong 4 giây */
+      z-index: 2; /* Hiển thị phía trên màn phủ */
+    }
+
+    /* CSS tùy chỉnh cho nội dung */
+    #content-inner {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      /* Thêm nội dung của trang "splash" tại đây */
+    }
+  </style>
+</head>
+<body>
+  <div id="overlay"></div>
+  <div id="content">
+    <div id="content-inner">
+      <!-- Thêm nội dung của trang "splash" tại đây -->
+      Ứng dụng của bạn sẽ xuất hiện ở đây.
+    </div>
+  </div>
+  <meta http-equiv="refresh" content="4;url=index.html"> <!-- Chuyển hướng sau 4 giây -->
+
+</body>
+</html>
