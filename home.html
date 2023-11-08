@@ -6,32 +6,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheet/color.css">
   <link rel="stylesheet" href="stylesheet/styles.css">
   <link rel="stylesheet" href="stylesheet/animation.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+  <style>
+    
+.btn
+{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 40px;
+  display: inline-block;
+  border: none;
+  white-space: nowrap;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+  </style>
 </head>
   <body>
-    
-  <div class="container">
-    <div class="row">
-      <div class="home-info padd-15">
-          <h3 class="hello">私 は <span class="name">ズオン・ヴァン・ゾイ</span>です。</h3>
-          <h3 class="my-profession">私は <span class="typing"></span>です。</h3> 
-          <p>現在、ハノイ工科大学で情報工学を勉強していて、2025 年に卒業する予定です。学校での知識に加えて、Webプログラミングについてさらに学んでおります。。。</p>
-          <a href="" class="btn"  onclick="delayOpen(event)"  >履歴書をダウンロード</a>
-          <button id="myButton">Nhấn vào đây</button>
-      </div>
-      <div class="home-img padd-15"> 
-      <img src="media/avatar.png" alt="">
+  <div class="d-flex flex-row">
+    <div > 
+      <div class="wrapper">
+      <img src="media/avatar.png" alt="" style="height:560px;">
+    </div>
+    </div>
+      <div >
+        <div class="wrapper">
+          <h3 class="hello">私 は <span>ズオン・ヴァン・ゾイ</span>です。</h3>
+          <h3 style="margin-top: 100px;">私は <span class="typing"></span>です。</h3> 
+          <p style="margin-top: 80px; font-size: 32px; ">現在、ハノイ工科大学で情報工学を勉強していて、2025 年に卒業する予定です。学校での知識に加えて、Webプログラミングについてさらに学んでおります。。。</p>
+          <a href="https://drive.google.com/file/d/15DoNI1egfcq1LAXg0rkfpm9DBFO1rDo-/view?usp=drive_link" class="btn">履歴書PDF</a>
+
       </div>
     </div>
+      
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" 
   referrerpolicy="no-referrer"></script>
   <script src="javascript/script.js"></script>
   <script src="javascript/animation.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script> 
+  </script>
   </body>
   </html>
+
+
+  
+

@@ -53,6 +53,7 @@ contentDiv.innerHTML = "";
 loadContent(section);
 }
 
+/** typing animation */
 var typed = new Typed(".typing",
 {
     strings:["HUSTのHEDSPIの学生","ウェブ開発者","ウェブデザイナー","アンドロイドのアプリ開発者"],
