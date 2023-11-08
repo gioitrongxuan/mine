@@ -3,61 +3,27 @@
 <head>
   <link rel="shortcut icon" href="media/logo.svg">
   <title>MINE</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="stylesheet/styles.css">
+  <link rel="stylesheet" href="stylesheet/animation.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-
-    body {
-      margin: 0;
-      overflow: hidden; /* Ẩn thanh cuộn */
-    }
-    #preload {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* animation-name: example; */
-    animation-duration: 1s;
-    background: #ffffff;
-    transform: translateX(-100%); /* Di chuyển nội dung ra bên phải */
-    transition: transform 1s ease; /* Hiệu ứng di chuyển trong 4 giây */
-    z-index: 3;
-  }
-
-  /* CSS tùy chỉnh cho nội dung */
-  #content-inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    /* Thêm n
-    ội dung của trang "index.html" tại đây */
-    
-  }
-  @keyframes popupAnimation {
-  0% { opacity: 0; }
-  40% { opacity: 0; }
-  80% { opacity: 1; }
-  100%{opacity: 0;}
+  <style>
+      /* CSS tùy chỉnh cho nội dung */
+#content-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  /* Thêm n
+  ội dung của trang "index.html" tại đây */
 }
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  padding: 20px;
-  border: 1px solid #000000;
-  animation: popupAnimation 5s forwards;
+#content {
+height: 560px; /* Đặt chiều cao của phần bạn muốn cuộn */
+overflow-y:scroll; /* Hiển thị thanh cuộn khi nội dung vượt ra ngoài khu vực */
 }
-</style>
-</head>
+  </style>
 </head>
 <body>
   <div id="preload">
@@ -75,7 +41,7 @@
         <!-- <iframe src="navbar.html" id="fullscreen-iframe"></iframe> -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom scroll" style="height: 98px; z-index: 1;" >
           <div class="container-fluid", style=" padding: 0;" >
-            <a class="navbar-brand" href="javascript:void(0)" onclick="loadContent('home')"><img src="media/cum.svg" alt="Logo" style="width: 400px; height: 80px;"></a>
+            <a class="navbar-brand" href="javascript:void(0)" onclick="selectSection('home')"><img src="media/cum.svg" alt="Logo" style="width: 400px; height: 80px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">...</button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
               <div class="offcanvas-header">
@@ -85,19 +51,19 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="loadContent('about')">について</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('about'); ">について</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="loadContent('projects')">プロジェクト</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('projects')">プロジェクト</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="loadContent('skills')">スキル</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('skills')">スキル</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="loadContent('future')">将来の目</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('future')">将来の目</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="loadContent('contact')">コンタクト</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('contact')">コンタクト</a>
                   </li>
                 </ul>
                 
@@ -107,40 +73,12 @@
           </div>
         </nav>
         
-        <div id="content"></div>
-        <script>
-          
-    // Tự động chuyển đổi lớp để hiển thị nội dung sau khi trang "index" đã hoàn thành
-    window.addEventListener('DOMContentLoaded', function() {
-      var content = document.getElementById('preload');
-      setTimeout(function() {
-        content.style.transform = 'translateX(0)'; // Di chuyển nội dung về vị trí ban đầu
-        setTimeout(function() {
-          content.style.transform = 'translateX(100%)'; // Di chuyển nội dung lại ra bên trái
-        }, 2000); 
-      }, 1500); // Tạm dừng 100ms trước khi thực hiện hiệu ứng lần đầu
-    });
-
-    window.addEventListener('DOMContentLoaded', function() {
-    var popup = document.querySelector('.popup2');
-    setTimeout(function() {
-        popup.style.display = 'none';
-    }, 2500); // Thời gian hiển thị popup (đơn vị: milliseconds)
-});
-
-window.addEventListener('DOMContentLoaded', function() {
-    var popup = document.querySelector('.popup0');
-    setTimeout(function() {
-        popup.style.display = 'none';
-    }, 1800); // Thời gian hiển thị popup (đơn vị: milliseconds)
-});
-window.addEventListener('DOMContentLoaded', function() {
-  var popup = document.getElementById('popup1');
-  popup.style.display = 'block';
-});
-        </script>
+        <div id="content"  ></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" 
+  referrerpolicy="no-referrer"></script>
+  <script src="javascript/script.js"></script>
+  <script src="javascript/animation.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

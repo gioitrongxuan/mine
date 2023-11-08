@@ -1,59 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>ホーム</title>
-  <style>
-    /* CSS tùy chỉnh cho phần nội dung */
-    .content {
-      text-align: center;
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-    }
-
-    .name {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .social-links {
-      margin: 20px 0;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      font-size: 20px;
-      color: #007BFF;
-    }
-  </style>
+  <link rel="shortcut icon" href="media/logo.svg">
+  <title>MINE</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet/color.css">
+  <link rel="stylesheet" href="stylesheet/styles.css">
+  <link rel="stylesheet" href="stylesheet/animation.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body>
-  <div class="content">
-    <!-- Avatar -->
-    <img class="avatar" src="media/avatar.svg" alt="Avatar">
+  <body>
     
-    <!-- Tên -->
-    <div class="name">Tên của bạn</div>
-
-    <!-- Liên kết mạng xã hội -->
-    <div class="social-links">
-      <a href="https://www.facebook.com/gioitrongxuan" target="_blank">
-        <i class="fa-brands fa-square-facebook"></i>
-      </a>
-      <a href="https://github.com/gioitrongxuan" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:gioi.trongxuan@gmail.com">
-        <i class="far fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/gioitrongxuan" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
+  <div class="container">
+    <div class="row">
+      <div class="home-info padd-15">
+          <h3 class="hello">私 は <span class="name">ズオン・ヴァン・ゾイ</span>です。</h3>
+          <h3 class="my-profession">私は <span class="typing"></span>です。</h3> 
+          <p>現在、ハノイ工科大学で情報工学を勉強していて、2025 年に卒業する予定です。学校での知識に加えて、Webプログラミングについてさらに学んでおります。。。</p>
+          <a href="" class="btn"  onclick="delayOpen(event)"  >履歴書をダウンロード</a>
+          <button id="myButton">Nhấn vào đây</button>
+      </div>
+      <div class="home-img padd-15"> 
+      <img src="media/avatar.png" alt="">
+      </div>
     </div>
   </div>
-</body>
-</html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" 
+  referrerpolicy="no-referrer"></script>
+  <script src="javascript/script.js"></script>
+  <script src="javascript/animation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </body>
+  </html>
