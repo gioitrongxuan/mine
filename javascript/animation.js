@@ -56,7 +56,7 @@ loadContent(section);
 /** typing animation */
 var typed = new Typed(".typing",
 {
-    strings:["HUSTのHEDSPIの学生","ウェブ開発者","ウェブデザイナー","アンドロイドのアプリ開発者"],
+    strings:["HUSTのHEDSPIの学生","ウェブ開発者"],
     typeSpeed: 150,
     backSpeed: 100,
     loop:true

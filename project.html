@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .project {
+            width: 40%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-left: 100px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .project:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="projects-container">
+    <div class="project">
+        <h2>MovReact</h2>
+        <img src="media/pj2.png" alt="Project 1 Image">
+        <p><strong>プロジェクトの目的:</strong> 映画の評価と情報をユーザーに表示するウェブサイト</p>
+        <p><strong>開発期間:</strong> ２ か月</p>
+        <p><strong>チーム規模:</strong> ４ ひと</p>
+        <p><strong><a href="https://github.com/yourusername/project1" target="_blank">GitHub</a></p></strong> 
+    </div>
+
+    <div class="project">
+        <h2>Instagram clone</h2>
+        <img src="media/pj1.png" alt="Project 2 Image">
+        <p><strong>プロジェクトの目的:</strong>ruby on rails　を学ぶために</p>
+        <p><strong>開発期間:</strong> １ 週</p>
+        <p><strong>チーム規模:</strong> １ 人</p>
+        <p><strong><a href="https://github.com/yourusername/project1" target="_blank">GitHub</a></p></strong> 
+    </div>
+    <!-- Thêm các dự án khác tương tự cho mỗi project -->
+</div>
+
+</body>
+</html>

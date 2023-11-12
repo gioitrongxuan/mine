@@ -19,8 +19,9 @@
 }
 #content {
 width: 100%;
-height: 565px; /* Đặt chiều cao của phần bạn muốn cuộn */
-overflow: scroll;
+height: 575px; /* Đặt chiều cao của phần bạn muốn cuộn */
+overflow-y: scroll;
+overflow-x: hidden;
 }
   </style>
 
@@ -64,7 +65,7 @@ overflow: scroll;
                     <a class="nav-link" href="javascript:void(0)" onclick="selectSection('about'); ">について</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('projects')">プロジェクト</a>
+                    <a class="nav-link" href="javascript:void(0)" onclick="selectSection('project')">プロジェクト</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)" onclick="selectSection('skills')">スキル</a>
